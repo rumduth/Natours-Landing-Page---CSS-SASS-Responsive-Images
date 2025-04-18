@@ -1,0 +1,96 @@
+.btn {
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    border-radius: 10rem;
+    display: inline-block;
+    transition: all 0.3s;
+    position: relative;
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(0.1rem);
+    box-shadow: 0 0.5rem 0.5rem rgba($color-black, 0.2);
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+  }
+
+  &--white {
+    background-color: $color-white;
+    color: $color-grey-dark;
+
+    &::after {
+      background: $color-white;
+    }
+  }
+
+  &--green {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &::after {
+      background: $color-primary;
+    }
+  }
+
+  &--animated {
+    animation: moveInBottom 1s ease-out 0.1s;
+    animation-fill-mode: backwards;
+  }
+}
+
+.btn-text {
+  &:link,
+  &:visited {
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-bottom: 1px solid $color-primary;
+    color: $color-primary;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-size: $default-font-size;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+  }
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    transform: translateY(-0.4rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.15);
+    -webkit-transform: translateY(-0.4rem);
+    -moz-transform: translateY(-0.4rem);
+    -ms-transform: translateY(-0.4rem);
+    -o-transform: translateY(-0.4rem);
+  }
+  &:active {
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.15);
+    transform: translateY(-0.2rem);
+    -webkit-transform: translateY(-0.2rem);
+    -moz-transform: translateY(-0.2rem);
+    -ms-transform: translateY(-0.2rem);
+    -o-transform: translateY(-0.2rem);
+  }
+}

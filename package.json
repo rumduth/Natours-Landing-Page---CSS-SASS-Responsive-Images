@@ -1,0 +1,15 @@
+{
+  "name": "natour",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass ./sass/main.scss ./css/index.css --watch"
+  },
+  "dependencies": {
+    "sass": "^1.86.3"
+  }
+}
