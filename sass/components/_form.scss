@@ -17,6 +17,10 @@
     display: block;
     width: 90%;
 
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
     &:focus {
       outline: none;
       box-shadow: 0rem 1rem 2rem rgba($color-black, 0.1);
@@ -53,6 +57,10 @@
   &__radio-group {
     display: inline-block;
     width: 48%;
+    @include respond(tab-port) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-label {

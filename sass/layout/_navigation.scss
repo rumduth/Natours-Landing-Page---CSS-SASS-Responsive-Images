@@ -16,6 +16,14 @@
     z-index: 1000;
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     cursor: pointer;
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__icon {
     position: absolute;
@@ -81,6 +89,14 @@
     -moz-transition: all 0.6s;
     -ms-transition: all 0.6s;
     -o-transition: all 0.6s;
+    @include respond(tab-port) {
+      top: 4rem;
+      right: 4rem;
+    }
+    @include respond(phone) {
+      top: 3.5rem;
+      right: 3.5rem;
+    }
   }
   &__nav {
     height: 100vh;

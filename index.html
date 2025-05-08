@@ -79,21 +79,14 @@
           </div>
           <div class="col-1-of-2">
             <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="Photo 1"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="Photo 2"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/nat-3-large.jpg"
-                alt="Photo 3"
-                class="composition__photo composition__photo--p3"
-              />
+
+              <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" alt="Photo 1" src="img/nat-1-large.jpg"
+                class="composition__photo composition__photo--p1" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px">
+              <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" alt="Photo 2" src="img/nat-2-large.jpg"
+                class="composition__photo composition__photo--p2" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px">
+              <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" alt="Photo 3" src="img/nat-3-large.jpg"
+                class="composition__photo composition__photo--p3" sizes="(max-width: 900px) 20vw, (max-width: 600px) 30vw, 300px">
+
             </div>
           </div>
         </div>
@@ -358,7 +351,11 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" media="(max-width: 37.5em)">
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full logo">       
+        </picture>
+       
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -385,7 +382,8 @@
         <div class="col-1-of-2">
           <p class="footer__copyright">
             Built my <a href="#" class="footer__link">Jonas Schmedtmann</a> for his online course, and
-            <a href="#" class="footer__link">Thong Nguyen</a> has finished the project.
+            <a href="#" class="footer__link">Thong Nguyen</a> has finished the project. You are 100% allowed to use this webpage for both personal and commercial use, but NOT to claim it as your own design. 
+            A credit to the original author is highly appreciated!
           </p>
         </div>
       </div>
